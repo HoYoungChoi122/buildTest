@@ -100,20 +100,21 @@
       <b-row class="mb-4">
         <b-col cols="12">
           <b-input-group >
-            <template #prepend>
-              <b-button variant="primary" disabled >MEMO</b-button>
-            </template>
-            <b-form-textarea
+<!--            <template #prepend>-->
+<!--              <b-button variant="primary" disabled >MEMO</b-button>-->
+<!--            </template>-->
+
+            <textarea
                 id="textarea-state"
                 v-model="memo"
-                :state="memo.length <= 150"
-                placeholder="4줄까지만 입력해주세요 줄바꿈은 인식하지 않고 자동으로 줄바꿈이 됩니다. 많은것을 입력하면 잘려서 나옵니다."
+                style="resize:none;"
+                rows="4"
+                cols="45"
                 @keydown="checkBr"
-            ></b-form-textarea>
+            ></textarea>
           </b-input-group>
         </b-col>
       </b-row>
-
 
       <!-- 입력 : 포지션 -->
       <b-row class="mt-3 mb-1">
@@ -416,9 +417,9 @@
                 <b-card-text style="font-size:24px; " class="pl-4">MEMO</b-card-text>
               </b-input-group>
             </p>
-            <b-card-text class="pl-3 p-1 memo_box" style="border-left:3px dashed; white-space: break-spaces;" >
+            <p class="pl-3 p-1 memo_box" style="border-left:3px dashed; color:white; word-break: normal;" >
               {{memo}}
-            </b-card-text>
+            </p>
           </div>
         </b-col>
       </b-row>
