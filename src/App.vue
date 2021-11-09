@@ -3,7 +3,7 @@
     <nav-bar/>
     <router-view/>
     <br>
-    <intro/>
+<!--    <intro/>-->
   </div>
 </template>
 
@@ -14,6 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: hidden;
+  max-width: 800px;
 }
 
 #nav a {
@@ -27,8 +29,8 @@
 </style>
 <script>
 import NavBar from "@/components/navBar";
-import Intro from "@/components/intro";
+// import Intro from "@/components/intro";
 export default {
-  components: {Intro, NavBar}
+  components: { NavBar}
 }
 </script>
