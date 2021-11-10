@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import InputProfile from '../views/InputProfile.vue'
+import MapPage from '../views/map/Map'
 
 Vue.use(VueRouter)
 
@@ -23,7 +24,7 @@ const routes = [
   {
     path: '/map',
     name: 'map',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: MapPage
   }
 ]
 
