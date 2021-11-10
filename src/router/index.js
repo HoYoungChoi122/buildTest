@@ -1,25 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import InputProfile from '../views/InputProfile.vue'
+// import InputProfile from '../views/InputProfile.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'inputProfile',
+  //   component: InputProfile
+  // },
+  // {
+  //   path: '/about',
+  //   name: 'inputProfile',
+  //   component: InputProfile
+  // },
   {
     path: '/',
-    name: 'inputProfile',
-    component: InputProfile
+    name: 'About',
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/map',
+    name: 'map',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
-  base: '/tw',
+  base: '/',
   routes
 })
 

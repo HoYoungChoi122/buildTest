@@ -9,7 +9,8 @@
 
       <div id="nav">
         <router-link to="/">INPUT PROFILE</router-link> |
-        <router-link to="/about">OUT</router-link> |
+        <router-link to="/map">MAP</router-link> |
+<!--        <router-link to="/about">OUT</router-link> |-->
       </div>
 
     </b-navbar>
